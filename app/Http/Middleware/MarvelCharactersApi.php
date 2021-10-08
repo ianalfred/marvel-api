@@ -24,8 +24,8 @@ class MarvelCharactersApi
          */
 
         $ts = time();
-        $public_key = 'fe9adbc89a78257bc84e784f12d52764';
-        $private_key = '9dd5d40302e7e4570c76d9c8a8e4b2ff87b3a793';
+        $public_key = config('services.marvel.public_key');
+        $private_key = config('services.marvel.private_key');
         $hash = md5($ts.$private_key.$public_key);
         
         Cache::remember('marvel-characters', 60*60*24, function() use($ts, $public_key, $hash) {

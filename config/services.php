@@ -29,5 +29,9 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
+    'marvel' => [
+        'private_key' => env('MARVEL_PRIVATE_KEY'),
+        'public_key' => env('MARVEL_PUBLIC_KEY'),
+    ],
 
 ];
